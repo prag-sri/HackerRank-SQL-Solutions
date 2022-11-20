@@ -1,1 +1,10 @@
+Link:- https://www.hackerrank.com/challenges/african-cities/problem?isFullScreen=true
 
+SELECT 
+    NAME
+FROM CITY
+WHERE COUNTRYCODE IN
+(SELECT 
+    c.CODE
+FROM Country c
+WHERE CONTINENT="Africa");

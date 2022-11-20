@@ -1,1 +1,9 @@
+Link:- https://www.hackerrank.com/challenges/earnings-of-employees/problem?isFullScreen=true
 
+SELECT 
+(SELECT (salary*months) AS earnings FROM Employee
+ORDER BY earnings DESC
+LIMIT 1),
+(SELECT COUNT(*)
+FROM Employee
+WHERE salary*months=(SELECT (salary*months) AS earnings FROM Employee ORDER BY earnings DESC LIMIT 1));

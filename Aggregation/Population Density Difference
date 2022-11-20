@@ -1,0 +1,13 @@
+Link:- https://www.hackerrank.com/challenges/population-density-difference/problem?isFullScreen=true
+
+SELECT
+(SELECT 
+    POPULATION
+FROM CITY
+ORDER BY POPULATION DESC
+LIMIT 1)-
+(SELECT 
+    POPULATION
+FROM CITY
+ORDER BY POPULATION
+LIMIT 1)
